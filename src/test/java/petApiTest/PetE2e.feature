@@ -49,3 +49,11 @@ Feature: Realizar un feature end to end (POST, GET, PUT)
     When method put
     Then status 200
     * print 'Pet actualizado:', response
+
+    #4 Eliminar Pet
+
+    Given path '/pet' , petId
+    When method delete
+    Then status 200
+    * print 'Pet eliminado con id:', petId
+
